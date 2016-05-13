@@ -1,0 +1,119 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	/* Margin bottom by footer height */
+	padding-top: 50px;
+	background-color: #f5f8fa;
+	color: #1e3948;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #1e3948;
+}
+
+
+
+.navbar {
+    min-height: 40px;
+}
+
+.navbar-inverse {
+	background-image: none;
+    background-color: #3097d1;
+    border-color: #1c73a5;
+    filter: none;
+    color: #ffffff;
+}
+.navbar-fixed-top {
+    border-width: 0 0 1px;
+    top: 0;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	background-color: #fff;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+.container {
+	width: auto;
+	max-width: 1024px;
+}
+
+
+.content{
+	margin-top: 15px;
+	margin-bottom: 70px;
+}
+
+.container .text-muted {
+	margin: 20px 0;
+}
+
+.page-header{
+	border: none;
+}
+
+.listagem{
+	text-align: center;
+}
+
+.featurette {
+	border-color: #d3e0e9;
+    background-color: #ffffff;
+    border: 1px solid #d3e0e9;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    float: left;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+    .busca_paciente{
+        margin-top: 15px; 
+        padding: 20px;
+    }
+    
+    .busca_paciente input{
+        margin: 5px;
+    }
+    
+    .busca_paciente label{
+        padding-top: 7px;
+    }
+    
+    .paginacao_total{
+        float: left;
+        margin: 27px 27px 27px 0 ;
+    }
+
+
+
+
+
+
+
+
