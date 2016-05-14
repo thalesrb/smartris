@@ -8,7 +8,9 @@ use src\Buscas;
 
 $objBuscas = new \src\Buscas();
 
-$exames = $objBuscas->buscar_exames($_GET["busca"]);
+$pagina = ( isset($_GET["pagina"]) ) ? $_GET["pagina"] : 1;
+
+$exames = $objBuscas->buscar_exames($_GET["busca"], $pagina);
 
 $result = json_encode($exames);
 

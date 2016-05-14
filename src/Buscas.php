@@ -110,13 +110,13 @@ class Buscas {
      * @param unknown $busca
      * @return array
      */
-    public function buscar_exames($busca)
+    public function buscar_exames($busca, $pagina)
     {
         $campos = array();
         $campos["termo"] = $busca;
         $filtro_query = $this->monta_query_busca($campos);
 
-        $url_curl = URL_API . "tuss_exames?{$filtro_query}";
+        $url_curl = URL_API . "tuss_exames?pagina={$pagina}&{$filtro_query}";
 
         $result = $this->executa_curl($url_curl);
 

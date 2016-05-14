@@ -15,7 +15,7 @@
                 <div class="login-content  animated bounceIn" data-animation="bounceIn">
                     <form method='POST' action='login/'>
                         <div class="section-title">
-                            <h3>Entrar na sua conta</h3>
+                            <h3>Entrar no sistema</h3>
                             <p>É preciso estar logado para usar o sistema</p>
                         </div>
                         <div class="textbox-wrap">
@@ -70,7 +70,7 @@ function isEmail(s)
     var reEmail = /^[a-zA-Z0-9_!#$%&'*+\/=?^`{|}~-]+(\.[a-zA-Z0-9_!#$%&'*+\/=?^`{|}~-]+)*@(([a-zA-Z0-9-]+\.)+[A-Za-z]{2,6}|\[0-9{1,3}(\.0-9{1,3}){3}\])$/;
     if (isNull(s))
     return false;
-    
+
     return reEmail.test(s);
 }
 </script>
@@ -83,22 +83,22 @@ function isEmail(s)
             e.preventDefault()
             $('a[href="' + $(this).attr('href') + '"]').tab('show');
         });
-        
+
         $('#registrar a').click(function (e) {
             e.preventDefault()
             $('a[href="' + $(this).attr('href') + '"]').tab('show');
         });
-        
+
         var hash = window.location.hash;
         hash && $('ul.nav a[href="' + hash + '"]').tab('show');
-        
+
         $('.nav-tabs a').click(function (e) {
             $(this).tab('show');
             var scrollmem = $('body').scrollTop();
             window.location.hash = this.hash;
             $('html,body').scrollTop(scrollmem);
         });
-    
+
         $("input").iCheck({
             checkboxClass: 'icheckbox_square-blue',
             increaseArea: '20%' // optional
@@ -112,12 +112,12 @@ function isEmail(s)
         }).blur(function () {
             $(this).closest(".textbox-wrap").removeClass("focused");
         });
-        
+
         //On Scroll Animations
-        
-        
+
+
         if ($(window).width() >= 968 && !Modernizr.touch && Modernizr.cssanimations) {
-        
+
             $("body").addClass("scroll-animations-activated");
             $('[data-animation-delay]').each(function () {
                 var animationDelay = $(this).data("animation-delay");
@@ -128,37 +128,37 @@ function isEmail(s)
                     "-ms-animation-delay": animationDelay,
                     "animation-delay": animationDelay
                 });
-        
+
             });
             $('[data-animation]').waypoint(function (direction) {
                 if (direction == "down") {
                     $(this).addClass("animated " + $(this).data("animation"));
-        
+
                 }
             }, {
                 offset: '90%'
             }).waypoint(function (direction) {
                 if (direction == "up") {
                     $(this).removeClass("animated " + $(this).data("animation"));
-        
+
                 }
             }, {
                 offset: $(window).height() + 1
             });
         }
-        
+
         //End On Scroll Animations
-        
-        
+
+
         $(".main-nav a[href]").click(function () {
             var scrollElm = $(this).attr("href");
-        
+
             $("html,body").animate({ scrollTop: $(scrollElm).offset().top }, 500);
-        
+
             $(".main-nav a[href]").removeClass("active");
             $(this).addClass("active");
         });
-        
+
         if ($(window).width() > 1000 && !Modernizr.touch) {
             var options = {
                 $menu: ".main-nav",
@@ -173,14 +173,14 @@ function isEmail(s)
                 slideSpeed: 200
             };
         }
-        
+
         $(".colorBg a[href]").click(function () {
             var scrollElm = $(this).attr("href");
-        
+
             $("html,body").animate({ scrollTop: $(scrollElm).offset().top }, 500);
-        
+
             return false;
         });
-    
+
     });
 </script>
